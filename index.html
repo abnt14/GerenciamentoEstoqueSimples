@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerenciamento de compras</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Cadastrar produto</h1>
+            <form action="controller.php" method="POST" onsubmit="return verificarCamposCadastrar()">
+                <span>Nome</span>
+                <input type="text" id="Nome" name="Nome">
+                <span>Tipo</span>
+                <input type="number" id="Tipo" name="Tipo">
+                <span>Valor</span>
+                <input type="number" id="Valor" name="Valor">
+                <span>Quantidade</span>
+                <input type="number" id="Quantidade" name="Quantidade">
+                <button type="submit"  name="cadastrar" >Cadastrar</button>
+            </form>
+            
+            <h1>Procurar produto</h1>
+            <form action="controller.php" method="POST" onsubmit="return verificarCamposProcurar()">
+                <span>Nome</span>
+                <input type="text" id="proNome" name="proNome">
+                <span>Tipo</span>
+                <input type="number" id="proTipo"name="proTipo">
+                <span>Id</span>
+                <input type="number" id="proId" name="proId">
+                <button type="submit" name="procurar">Procurar</button>
+            </form>
+
+            <h1>Remover produto</h1>
+            <form action="controller.php" method="POST" onsubmit="return verificarCamposRemover()">
+                <span>Id</span>
+                <input type="text" id="remoId" name="remoId">
+                <button type="submit">Remover</button>
+            </form>
+        </main>
+    </body>
+</html>
